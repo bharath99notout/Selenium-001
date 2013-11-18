@@ -43,12 +43,12 @@ public class HomePage_RegistrationTests extends Helper_Subpages {
 	public void OpenUrl() throws IOException {
 		
 		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.get("http://www.ebay.com");
+	//	driver.manage().window().maximize(); 
+	//	driver.get("http://www.ebay.com");
 		waitForPagetoLoad_Element(driver, 60, EC.elementToBeClickable(By.linkText(getValue("homepage.registerlink", "HomePage"))));			
 		}	
 	
-	@After
+	@After 
 	public void QuitDriver() {		      
         driver.quit();  	
 	}
