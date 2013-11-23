@@ -57,14 +57,14 @@ public class HomePage_RegistrationTests extends Helper_Subpages {
 	
 	@SuppressWarnings("static-access")
 	@Test
-	public void Click_Register_VerifyRegistrationPage() throws IOException, InterruptedException {
+	public void Click_Signin_VerifySigninpage() throws IOException, InterruptedException {
 		
 		
 		clickElement(driver, By.linkText(getValue("homepage.signinlink","HomePage")));
 	
-		waitForPagetoLoad_Element(driver, 60, EC.titleContains(getValue("homepage.registerpagetitle_value", "HomePage")), true);
+		waitForPagetoLoad_Element(driver, 10, EC.titleContains(getValue("homepage.signinpagetitle_value", "HomePage")), true);
 		
-		assertTrue(IsElementPresent(By.xpath(getValue("homepage.registerpagetitle_element", "HomePage")), driver));
+		assertTrue(IsElementPresent(By.xpath(getValue("homepage.signinpagetitle_element", "HomePage")), driver));
 	}
 	
 	
