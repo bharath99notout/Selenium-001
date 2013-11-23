@@ -43,9 +43,11 @@ public class HomePage_RegistrationTests extends Helper_Subpages {
 	public void OpenUrl() throws IOException {
 		
 		driver = new FirefoxDriver();
-	//	driver.manage().window().maximize(); 
-	//	driver.get("http://www.ebay.com");
-		waitForPagetoLoad_Element(driver, 60, EC.elementToBeClickable(By.linkText(getValue("homepage.registerlink", "HomePage"))));			
+	    driver.manage().window().maximize(); 
+	    driver.get("http://www.ebay.com");
+		waitForPagetoLoad_Element(driver, 60, EC.elementToBeClickable(By.linkText(getValue("homepage.registerlink", "HomePage"))));	
+		
+		
 		}	
 	
 	@After 
@@ -58,7 +60,7 @@ public class HomePage_RegistrationTests extends Helper_Subpages {
 	public void Click_Register_VerifyRegistrationPage() throws IOException, InterruptedException {
 		
 		
-		clickElement(driver, By.linkText(getValue("homepage.registerlink","HomePage")));
+		clickElement(driver, By.linkText(getValue("homepage.signinlink","HomePage")));
 	
 		waitForPagetoLoad_Element(driver, 60, EC.titleContains(getValue("homepage.registerpagetitle_value", "HomePage")), true);
 		

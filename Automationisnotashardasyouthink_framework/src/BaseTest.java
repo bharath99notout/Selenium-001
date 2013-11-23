@@ -39,8 +39,8 @@ public class BaseTest {
 	{
 		Properties prp = new Properties();
 		
-		String path = "C:/Users/prasann/workspace/Automationisnotashardasyouthink_framework/Objects/Subpages.properties";
-		
+		String path = "C:/Users/Bharath/git/selenium/Automationisnotashardasyouthink_framework/Objects/Homepage.properties";
+               	
 		String newpath = path.replaceAll("Propfile", Propname);
 	
 		FileInputStream in = new FileInputStream(newpath);
